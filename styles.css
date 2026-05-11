@@ -4,15 +4,14 @@
 ================================= */
 
 :root {
-  --bg: #08090d;
+ 
   --bg-soft: #10131b;
   --card: rgba(255, 255, 255, 0.075);
   --card-strong: rgba(255, 255, 255, 0.12);
-  --text: #f7f7fb;
-  --muted: #a7adbd;
+
   --muted-2: #757d91;
   --line: rgba(255, 255, 255, 0.14);
-  --accent: #ffb84d;
+ 
   --accent-2: #8b5cf6;
   --accent-3: #22d3ee;
   --danger: #ff5d7a;
@@ -21,6 +20,55 @@
   --radius-md: 18px;
   --shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
   --container: 1120px;
+}
+
+
+/* Default light mode (optional) */
+:root {
+  --bg: #fdfdfd;
+  --text: #111;
+  --muted: #555;
+  --accent: #ff0000;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #08090d;
+    --text: #f7f7fb;
+    --muted: #a7adbd;
+    --accent: #22d3ee;
+  }
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.hero,
+.section,
+.footer {
+  background-color: transparent; /* no solid boxes */
+}
+.editor-card,
+.video-card,
+.testimonial-card {
+  background-color: rgba(0, 0, 0, 0.3); /* or 0.15–0.2 for lighter effect */
+  backdrop-filter: blur(4px);           /* adds soft glassy effect */
+  border-radius: 24px;
+  padding: 16px;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+.btn-secondary {
+  background-color: var(--muted);
+  color: var(--text);
 }
 
 * {
