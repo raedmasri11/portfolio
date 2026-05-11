@@ -1529,14 +1529,6 @@ p, span, a, li {
 /* Mobile dark mode */
 @media (max-width: 720px) and (prefers-color-scheme: dark) {
   body, h1, h2, h3, h4, h5, h6, p, span, a, li {
-    color: var(--text) !important;
-  }
-
-  .nav a,
-  .hero-text,
-  .testimonial-card p,
-  .preview-screen p,
-  .service-card h3 {
-    color: var(--text) !important;
+    color: #f7f7fb !important;
   }
 }
