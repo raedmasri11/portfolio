@@ -79,6 +79,8 @@ const closeButtons = document.querySelectorAll("[data-close-modal]");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 
+
+
 /*
 function createVideoCard(video, index) {
   const article = document.createElement("article");
@@ -206,8 +208,10 @@ document.addEventListener("keydown", event => {
 
 closeButtons.forEach(button => button.addEventListener("click", closeModal));
 
+
 navToggle.addEventListener("click", () => {
   nav.classList.toggle("open");
+  
 });
 
 nav.querySelectorAll("a").forEach(link => {
@@ -231,3 +235,5 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(element => observer.observe(element));
+
+
