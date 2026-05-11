@@ -916,6 +916,9 @@ p, span, a, li {
 
 /* MARQUEE */
 
+
+
+
 .marquee-section .marquee-track {
   background-color: var(--marquee-bg);  /* mint green */
    padding: 24px 0;          /* increase vertical padding */
@@ -1467,6 +1470,9 @@ p, span, a, li {
     gap: 18px;
     text-align: center;
   }
+  .marquee-section {
+    overflow-x: hidden; /* clip anything that overflows horizontally */
+  }
 
 
   .contact-actions a.btn-instagram,
@@ -1520,11 +1526,17 @@ p, span, a, li {
   }
 }
 
+/* Mobile dark mode */
 @media (max-width: 720px) and (prefers-color-scheme: dark) {
   body, h1, h2, h3, h4, h5, h6, p, span, a, li {
     color: var(--text) !important;
   }
-  .nav a {
+
+  .nav a,
+  .hero-text,
+  .testimonial-card p,
+  .preview-screen p,
+  .service-card h3 {
     color: var(--text) !important;
   }
 }
