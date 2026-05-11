@@ -45,8 +45,8 @@
   --bg: #f5fdfa;          /* very light mint/cyan background */
   --nav-bg: #c7f0ec; 
   --marquee-bg: #a7f0e8; /* soft mint green background */  /* subtle cyan for navbar */
-  --text: #004d4d;        /* dark teal text for readability */
-  --muted: #006666;       /* secondary text / captions */
+  --text: #004d4d;          /* dark teal for readability on light background */
+  --muted: #006a5a;         /* for secondary text */
   --accent: #00bfa5;      /* mint green for buttons / highlights */
   --btn-bg: var(--accent);
   --btn-text: #ffffff;    /* buttons text white for contrast */
@@ -68,8 +68,8 @@
     --bg: #08090d;
      --nav-bg: rgba(8,9,13,0.9); /* slightly transparent dark nav */
     --marquee-bg: #08090d; /* original dark background */
-    --text: #f7f7fb;
-    --muted: #a7adbd;
+    --text: #f7f7fb;         /* white/light text on dark background */
+    --muted: #c7d1e0;        /* muted text on dark */
     --accent: #22d3ee;
      --video-tag-gradient: linear-gradient(135deg, rgba(34,211,238,0.35), rgba(0,191,165,0.35));
     --video-tag-text: #f7f7fb;
@@ -161,6 +161,16 @@ img {
   max-width: 100%;
 }
 
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, a, li {
+  color: var(--text) !important;
+}
+
+/* Muted / secondary text */
+.muted, .hero-text, .testimonial-card p {
+  color: var(--muted) !important;
+}
 .noise {
   pointer-events: none;
   position: fixed;
@@ -1507,5 +1517,14 @@ img {
   .contact-actions a.btn {
     font-size: 14px;
     padding: 8px 12px;
+  }
+}
+
+@media (max-width: 720px) and (prefers-color-scheme: dark) {
+  body, h1, h2, h3, h4, h5, h6, p, span, a, li {
+    color: var(--text) !important;
+  }
+  .nav a {
+    color: var(--text) !important;
   }
 }
